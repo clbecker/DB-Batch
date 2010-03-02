@@ -1,0 +1,51 @@
+DB-Batch version 0.10
+=====================
+
+	DB::Batch is a system for breaking up queries into batches behind the scenes, 
+	while maintaining the appearance of running a single query.  
+	Queries are run against an instance of DBI.  
+
+	For example, a query like: 
+
+	SELECT * FROM TABLE
+
+	is expressed as:
+
+	SELECT * FROM TABLE WHERE id BETWEEN # AND #
+
+	and would be executed as:
+
+	SELECT * FROM TABLE WHERE id BETWEEN 1 AND 100
+	SELECT * FROM TABLE WHERE id BETWEEN 101 AND 200
+	SELECT * FROM TABLE WHERE id BETWEEN 201 AND 300
+	...
+
+	Until the MAX(id) is reached.
+
+	The script running this query, however, acts as if you are just 
+	running 'SELECT * FROM TABLE'.
+
+	The purpose of this is to diminish load on a sql database when large amounts of
+	data need to be retrieved by managing batch size and throttling.  
+
+
+INSTALLATION
+
+To install this module type the following:
+
+   perl Makefile.PL
+   make
+   make install
+
+DEPENDENCIES
+
+This module is designed to work with DBI
+
+COPYRIGHT AND LICENCE
+
+	Copyright 2010, Chris Becker
+
+	Original work sponsered by Shutterstock, LLC. http://shutterstock.com
+
+	This program is free software; you can redistribute it and/or modify it
+	under the same terms as Perl itself.

@@ -1,0 +1,10 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+lib/DB/Batch.pm
+lib/DB/Batch/BindValues.pm
+lib/DB/Batch/Do.pm
+lib/DB/Batch/Fetch.pm
+lib/DB/Batch/Main.pm
+lib/DB/Batch/Query.pm
