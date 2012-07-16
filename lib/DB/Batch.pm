@@ -25,10 +25,10 @@ sub new {
 }
 
 1;
-=pod
+
 =head1 NAME
 
-    B<DB::Batch> - Run database queries in batches through DBI
+	DB::Batch - Run database queries in batches through DBI
 
 =head1 SYNOPSIS
 
@@ -62,7 +62,7 @@ sub new {
 
 =head1 USAGE
 
-=over 4
+=over
 
 =item Divide a query over a primary key.
 
@@ -278,7 +278,7 @@ Hooks
 
 =head1 PUBLIC METHODS
 
-=over 4
+=over
 
 =item new (dbh => DBI::db)
 
@@ -380,7 +380,5 @@ L<http://shutterstock.com>
 
 This program is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
-
-=back
 
 =cut
