@@ -1,7 +1,7 @@
 Changes
 Makefile.PL
 MANIFEST
-README
+README.pod
 lib/DB/Batch.pm
 lib/DB/Batch/BindValues.pm
 lib/DB/Batch/Do.pm
